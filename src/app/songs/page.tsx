@@ -10,7 +10,7 @@ export default function SongPage() {
             <ul>
                 {songs.map((song, index) => (
                     <div key={index}>
-                        <li className="text-green-700 hover:underline"><Link
+                        <li className="text-emerald-700 dark:text-emerald-200 hover:underline"><Link
                             href={`#${song.title.toLowerCase().replaceAll(' ', '-')}`}>{song.title}</Link></li>
                     </div>
                 ))}
@@ -23,15 +23,18 @@ export default function SongPage() {
             <div className="flex justify-center items-center">
                 <h1 className="text-3xl mb-10 ">Your Favorite Irish Choruses</h1>
             </div>
-            <div className="flex space-x-10">
+            <div className="flex space-x-10 flex-wrap">
                 <div>
-
                     {songList}
                 </div>
                 <div className="flex flex-col">
                     {songs.map((song, index) => (
-                        <div key={index} className="mb-5 divide-green-700">
+                        <div key={index} className="mb-5 divide-green-700 dark:divide-emerald-200">
                             <Song title={song.title} chorusLines={song.chorusLines}/>
+                            <Link href={`#`}>
+                                <p className="text-emerald-700 dark:text-emerald-200 hover:underline mt-3">Back to
+                                    top</p>
+                            </Link>
                             <hr className={"mt-5 border-1"}/>
                         </div>
                     ))}

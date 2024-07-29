@@ -1,10 +1,10 @@
 import type {Metadata} from "next";
-import {Inter} from "next/font/google";
+import {Raleway} from "next/font/google";
 import Navbar from "@/templates/Navbar";
 import "./globals.css";
 import Footer from "@/templates/Footer";
 
-const inter = Inter({subsets: ["latin"]});
+const font = Raleway({subsets: ["latin"]});
 
 export const metadata: Metadata = {
     title: "The Irish Aires",
@@ -18,10 +18,16 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={`${inter.className} min-h-screen`}>
-        <Navbar/>
-        {children}
-        <Footer/>
+        <body className={`${font.className} min-h-screen bg-gray-50 dark:bg-emerald-950 flex flex-col`}>
+        <div className="flex-grow-0">
+            <Navbar/>
+        </div>
+        <div className={`flex-grow`}>
+            {children}
+        </div>
+        <div className={`flex-grow-0`}>
+            <Footer/>
+        </div>
         </body>
         </html>
     );

@@ -11,19 +11,31 @@ export interface NavbarItem {
 interface NavbarV2Props {
     logo: ReactNode;
     textColor?: string;
+    hoverTextColor?: string;
+    backgroundColor?: string;
     items: NavbarItem[];
 }
 
 const NavbarV2 = (props: NavbarV2Props) => {
-    const {textColor = "text-white", logo, items} = props;
+    const {
+        textColor = "text-white",
+        backgroundColor = "bg-gray-800",
+        logo,
+        items
+    } = props;
+    let {hoverTextColor = "hover:text-blue-500"} = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathName = usePathname();
+
+    if (!hoverTextColor.startsWith("hover:")) {
+        hoverTextColor = `hover:${hoverTextColor}`;
+    }
 
     return (
         // desktop navbar
         <div>
             <div className="block md:hidden">
-                <nav className="bg-gray-400 dark:bg-gray-900 border-gray-200">
+                <nav className={`${backgroundColor}`}>
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                             {logo}
@@ -67,7 +79,7 @@ const NavbarV2 = (props: NavbarV2Props) => {
                                         <li key={i}>
                                             <Link
                                                 href={item.href}
-                                                className={`block py-2 px-3 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 ${pathName.includes(item.href) ? "bg-blue-700" : ""}`}
+                                                className={`block py-2 px-3 text-white ${hoverTextColor} rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 ${pathName.includes(item.href) ? "bg-blue-700" : ""}`}
                                             >
                                                 {item.label}
                                             </Link>
@@ -81,18 +93,18 @@ const NavbarV2 = (props: NavbarV2Props) => {
             </div>
 
             <div className="hidden md:block">
-                <div className="bg-gray-400 dark:bg-gray-900 ">
+                <div className={`${backgroundColor}`}>
                     <div className="py-6 px-4">
                         <div className="flex flex-wrap items-center justify-between">
                             <div>
                                 <Link href="/">{logo}</Link>
                             </div>
                             <nav>
-                                <ul className={`navbar flex space-x-4 items-center text-l  ${textColor}`}>
+                                <ul className={`navbar flex space-x-4 items-center text-l ${textColor}`}>
                                     {items.map((item, i) => (
                                         <li key={i}>
                                             <Link
-                                                className={`${pathName.includes(item.href) ? "underline underline-offset-8" : ""}`}
+                                                className={`${hoverTextColor} ${pathName.includes(item.href) ? "underline underline-offset-8" : ""}`}
                                                 href={item.href}
                                             >
                                                 {item.label}

@@ -1,20 +1,24 @@
 import BandPhoto from '../../public/band-photo.jpeg'
 import Image from "next/image";
+import Schedule from "@/templates/Schedule";
 
 
-export default function Home() {
+const Home = async () => {
+    const schedule = await Schedule({showPastEvents: false});
     return (
-        <div className="min-h-screen">
-            <div className="flex-grow flex flex-col">
-                <div className="flex-grow flex flex-col items-center justify-center">
-                    <h1 className="md:text-6xl text-2xl font-bold text-green-700 mt-5">The Irish Aires</h1>
-                    <div className="mx-5 mt-10">
-                        <Image src={BandPhoto} alt={"the guys in the band"} className="rounded-lg"/>
-                    </div>
-                    <p className="md:text-2xl text-l text-gray-700 mt-5">CURRENTLY UNDER CONSTRUCTION</p>
-                    <p className="md:text-2xl text-l text-gray-700 mt-5 mb-5">Come back soon?</p>
+        <div className="flex-grow flex flex-col">
+            <div className="flex-grow flex flex-col items-center justify-center">
+                <h1 className="md:text-6xl text-4xl font-bold text-green-700 mt-5 uppercase">The Irish Aires</h1>
+                <div className="mx-5 mt-10">
+                    <Image src={BandPhoto} alt={"the guys in the band"} className="rounded-lg max-h-screen" style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}/>
                 </div>
+                {schedule}
             </div>
         </div>
     );
 }
+
+export default Home;

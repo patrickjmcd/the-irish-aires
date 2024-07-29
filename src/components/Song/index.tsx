@@ -6,7 +6,7 @@ interface SongProps {
 const Song = ({title, chorusLines}: SongProps) => {
     return (
         <div id={title.toLowerCase().replaceAll(' ', '-')}>
-            <h1 className="text-xl">{title}</h1>
+            <h1 className="text-xl mb-3">{title}</h1>
             <ul>
                 {chorusLines.map((line, index) => (
                     <li key={index}>{line}</li>
