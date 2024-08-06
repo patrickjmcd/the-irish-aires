@@ -13,6 +13,7 @@ interface NavbarV2Props {
     textColor?: string;
     hoverTextColor?: string;
     backgroundColor?: string;
+    selectedBackgroundColor?: string;
     items: NavbarItem[];
 }
 
@@ -20,6 +21,7 @@ const NavbarV2 = (props: NavbarV2Props) => {
     const {
         textColor = "text-white",
         backgroundColor = "bg-gray-800",
+        selectedBackgroundColor = "bg-blue-700",
         logo,
         items
     } = props;
@@ -32,7 +34,7 @@ const NavbarV2 = (props: NavbarV2Props) => {
     }
 
     return (
-        // desktop navbar
+        // mobile navbar
         <div>
             <div className="block md:hidden">
                 <nav className={`${backgroundColor}`}>
@@ -79,7 +81,7 @@ const NavbarV2 = (props: NavbarV2Props) => {
                                         <li key={i}>
                                             <Link
                                                 href={item.href}
-                                                className={`block py-2 px-3 text-white ${hoverTextColor} rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 ${pathName.includes(item.href) ? "bg-blue-700" : ""}`}
+                                                className={`block py-2 px-3 ${textColor} ${hoverTextColor} rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 ${pathName.includes(item.href) && item.href !== "/" || item.href === "/" && pathName === "/" ? selectedBackgroundColor : ""}`}
                                             >
                                                 {item.label}
                                             </Link>
@@ -92,6 +94,7 @@ const NavbarV2 = (props: NavbarV2Props) => {
                 </nav>
             </div>
 
+            {/*desktop navbar*/}
             <div className="hidden md:block">
                 <div className={`${backgroundColor}`}>
                     <div className="py-6 px-4">
@@ -104,7 +107,7 @@ const NavbarV2 = (props: NavbarV2Props) => {
                                     {items.map((item, i) => (
                                         <li key={i}>
                                             <Link
-                                                className={`${hoverTextColor} ${pathName.includes(item.href) ? "underline underline-offset-8" : ""}`}
+                                                className={`${hoverTextColor} ${pathName.includes(item.href) && item.href !== "/" || item.href === "/" && pathName === "/" ? "underline underline-offset-8" : ""}`}
                                                 href={item.href}
                                             >
                                                 {item.label}

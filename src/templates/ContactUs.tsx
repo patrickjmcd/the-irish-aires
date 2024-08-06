@@ -12,16 +12,30 @@ interface ContactUsProps {
 
 
 export const ContactUs = ({emailServiceId, emailTemplateId, emailPublicKey}: ContactUsProps) => {
+    const [sendError, setSendError] = React.useState<string | null>(null);
+    const [sendSuccess, setSendSuccess] = React.useState<boolean>(false);
+
     return (
         <Formik initialValues={{name: '', message: '', email: ''}} onSubmit={async (values, {setSubmitting}) => {
 
-            await emailjs.send(emailServiceId, emailTemplateId, values, {
-                publicKey: emailPublicKey,
-            })
-            setSubmitting(false);
+            try {
+                await emailjs.send(emailServiceId, emailTemplateId, values, {
+                    publicKey: emailPublicKey,
+                })
+                setSubmitting(false);
+                setSendSuccess(true);
+            } catch (e) {
+                setSendError("Failed to send message. Please try again later.");
+                console.error(e);
+                setSubmitting(false);
+            }
+
         }}>
             {({values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting}) => (
                 <form onSubmit={handleSubmit} className={"flex flex-col space-y-4"}>
+                    <div className={'self-center'}>
+                        <p className={"text-xl"}>Send us a message and we'll get back to you as soon as we can!</p>
+                    </div>
                     <div>
                         <Input
                             id={'name'}
@@ -55,11 +69,22 @@ export const ContactUs = ({emailServiceId, emailTemplateId, emailPublicKey}: Con
                         />
                     </div>
 
-                    <div className={'self-center'}>
+                    {!sendError && !sendSuccess && (<div className={'self-center'}>
                         <button type="submit" disabled={isSubmitting}
                                 className={"text-amber-200 bg-green-700 px-8 py-3 rounded-lg text-xl"}>Submit
                         </button>
-                    </div>
+                    </div>)}
+                    {sendError && (<div className={'self-center'}>
+                        <div className="bg-red-700 text-white text-base rounded-lg p-4 flex">
+                            <p>{sendError}</p>
+                        </div>
+                    </div>)}
+                    {sendSuccess && (<div className={'self-center'}>
+                            <div className="bg-green-700 text-white text-base rounded-lg p-4 flex">
+                                <p>Message sent! We'll get back to you soon!</p>
+                            </div>
+                        </div>
+                    )}
 
                 </form>
             )}

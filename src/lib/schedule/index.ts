@@ -1,3 +1,4 @@
+'use server';
 import GoogleJWTClient from "@/lib/google-auth";
 import {google} from "googleapis";
 import {parse} from 'date-fns'

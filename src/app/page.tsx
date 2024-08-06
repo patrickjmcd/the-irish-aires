@@ -2,13 +2,15 @@ import BandPhoto from '../../public/band-photo.jpeg'
 import Image from "next/image";
 import Schedule from "@/templates/Schedule";
 
+export const dynamic = 'force-dynamic';
 
 const Home = async () => {
     const schedule = await Schedule({showPastEvents: false});
     return (
         <div className="flex-grow flex flex-col">
             <div className="flex-grow flex flex-col items-center justify-center">
-                <h1 className="md:text-6xl text-4xl font-bold text-green-700 mt-5 uppercase">The Irish Aires</h1>
+                <h1 className="md:text-6xl text-4xl text-green-700 dark:text-emerald-50 mt-5 uppercase">The
+                    Irish Aires</h1>
                 <div className="mx-5 mt-10">
                     <Image src={BandPhoto} alt={"the guys in the band"} className="rounded-lg max-h-screen" style={{
                         width: '100%',

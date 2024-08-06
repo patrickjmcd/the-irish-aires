@@ -1,5 +1,7 @@
 import Schedule from "@/templates/Schedule";
 
+export const dynamic = 'force-dynamic'
+
 const SchedulePage = async () => {
 
     const schedule = await Schedule({showPastEvents: true});

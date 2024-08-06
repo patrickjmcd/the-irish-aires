@@ -1,12 +1,12 @@
 import songs from './songs.json'
 import Song from "@/components/Song";
 import Link from "next/link";
+import Section from "@/components/Section";
 
 export default function SongPage() {
 
     const songList = (
         <div>
-            <h1 className="text-xl mb-5">Song List</h1>
             <ul>
                 {songs.map((song, index) => (
                     <div key={index}>
@@ -19,15 +19,19 @@ export default function SongPage() {
 
 
     return (
-        <div className="m-5">
+        <div className="m-10">
             <div className="flex justify-center items-center">
-                <h1 className="text-3xl mb-10 ">Your Favorite Irish Choruses</h1>
+                <h1 className="text-3xl mb-10">Your Favorite Irish Choruses</h1>
             </div>
-            <div className="flex space-x-10 flex-wrap">
-                <div>
-                    {songList}
+            <div className="flex md:space-x-10 flex-wrap">
+                <div className={"w-full md:w-1/3 md:flex-grow-0"}>
+                    <Section collapsible title={"Song List"}
+                             collapseButtonStyle={"text-emerald-800"}>
+                        {songList}
+                    </Section>
                 </div>
-                <div className="flex flex-col">
+
+                <div className="flex flex-col flex-grow mt-10 md:mt-0">
                     {songs.map((song, index) => (
                         <div key={index} className="mb-5 divide-green-700 dark:divide-emerald-200">
                             <Song title={song.title} chorusLines={song.chorusLines}/>
