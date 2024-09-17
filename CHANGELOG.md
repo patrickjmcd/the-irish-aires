@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/patrickjmcd/the-irish-aires/compare/v1.0.1...v1.0.2) (2024-09-17)
+
+
+### Bug Fixes
+
+* include google sa in build process ([a1f5fc3](https://github.com/patrickjmcd/the-irish-aires/commit/a1f5fc387e481246ac58f0c7fdcb327273dba99b))
+
 ## [1.0.1](https://github.com/patrickjmcd/the-irish-aires/compare/v1.0.0...v1.0.1) (2024-09-17)
 
 
