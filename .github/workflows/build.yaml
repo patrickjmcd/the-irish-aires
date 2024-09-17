@@ -5,9 +5,10 @@ on:
     types: [ published ]
 
 jobs:
-
   test-build:
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_SA_B64: ${{ secrets.GOOGLE_SA_B64 }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
