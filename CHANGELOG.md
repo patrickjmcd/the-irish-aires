@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/patrickjmcd/the-irish-aires/compare/v1.0.0...v1.0.1) (2024-09-17)
+
+
+### Bug Fixes
+
+* fix lockfile ([ebaebdb](https://github.com/patrickjmcd/the-irish-aires/commit/ebaebdb08f7910f4e1e582e3354c090008de74da))
+
 ## 1.0.0 (2024-09-17)
 
 
