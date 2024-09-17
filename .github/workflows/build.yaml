@@ -5,8 +5,26 @@ on:
     types: [ published ]
 
 jobs:
+
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm build
+
   trigger-amplify:
     runs-on: ubuntu-latest
+    needs: test-build
     steps:
       - name: trigger Amplify build
         run: |
