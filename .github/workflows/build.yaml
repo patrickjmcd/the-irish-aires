@@ -1,0 +1,14 @@
+name: build
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  trigger-amplify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: trigger Amplify build
+        run: |
+          URL="${{secrets.AMPLIFY_BUILD_URL}}"
+          curl -X POST -d {} "$URL" -H "Content-Type:application/json"
