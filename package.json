@@ -14,7 +14,7 @@
     "@heroicons/react": "^2.1.5",
     "date-fns": "^4.0.0",
     "formik": "^2.4.6",
-    "googleapis": "140",
+    "googleapis": "144",
     "next": "14.2.12",
     "next-intl": "^3.17.0",
     "react": "^18",
