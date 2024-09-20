@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/patrickjmcd/the-irish-aires/compare/v1.0.2...v1.0.3) (2024-09-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency googleapis to v144 ([ad02632](https://github.com/patrickjmcd/the-irish-aires/commit/ad026329003536d8e12e615e460fa1d0b8592d48))
+* **deps:** update dependency next-intl to v3.19.4 ([e350cf4](https://github.com/patrickjmcd/the-irish-aires/commit/e350cf4696c90cec660da5a7ee1eaef3fec0f07c))
+
 ## [1.0.2](https://github.com/patrickjmcd/the-irish-aires/compare/v1.0.1...v1.0.2) (2024-09-17)
 
 
