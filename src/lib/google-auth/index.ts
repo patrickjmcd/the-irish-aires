@@ -16,7 +16,6 @@ const makeJwtClient = async () => {
             SCOPES
         );
         const authResult = await jwtClient.authorize();
-        console.log(authResult);
         return jwtClient;
     } catch (e) {
         console.error(e);
