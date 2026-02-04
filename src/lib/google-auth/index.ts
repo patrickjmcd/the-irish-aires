@@ -9,12 +9,11 @@ const makeJwtClient = async () => {
         const serviceAccount = JSON.parse(
             Buffer.from(serviceAccountB64, 'base64').toString(),
         );
-        const jwtClient = new google.auth.JWT(
-            serviceAccount.client_email,
-            undefined,
-            serviceAccount.private_key,
-            SCOPES,
-        );
+        const jwtClient = new google.auth.JWT({
+            email: serviceAccount.client_email,
+            key: serviceAccount.private_key,
+            scopes: SCOPES,
+        });
         const _authResult = await jwtClient.authorize();
         return jwtClient;
     } catch (e) {
