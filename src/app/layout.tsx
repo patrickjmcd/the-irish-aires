@@ -1,5 +1,6 @@
 import type {Metadata} from "next";
 import {Raleway} from "next/font/google";
+import {Analytics} from "@vercel/analytics/react";
 import Navbar from "@/templates/Navbar";
 import "./globals.css";
 import Footer from "@/templates/Footer";
@@ -28,6 +29,7 @@ export default function RootLayout({
         <div className={`flex-grow-0`}>
             <Footer/>
         </div>
+        <Analytics/>
         </body>
         </html>
     );
