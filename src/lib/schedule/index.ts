@@ -1,28 +1,26 @@
 'use server';
-import GoogleJWTClient from "@/lib/google-auth";
-import {google} from "googleapis";
-import {parse} from 'date-fns'
+import { parse } from 'date-fns';
+import { google } from 'googleapis';
+import GoogleJWTClient from '@/lib/google-auth';
 
 interface ScheduleResponse {
     pastEvents: Array<ScheduleEntry>;
     futureEvents: Array<ScheduleEntry>;
 }
 
-
 const parseDate = (date: string, time: string): Date => {
     return parse(`${date} ${time}`, 'MM/dd/yyyy h:mm:ss aa', new Date());
-}
+};
 
 export const getSchedule = async (): Promise<ScheduleResponse> => {
-    const sheets = google.sheets({version: "v4", auth: GoogleJWTClient});
+    const sheets = google.sheets({ version: 'v4', auth: GoogleJWTClient });
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: '1QcBWYDbfbyNwTIguAlteb5WFzUrT0QIwq_FgrjqIJAc',
-        range: "Schedule!A2:J",
+        range: 'Schedule!A2:J',
     });
     const rows = response.data.values;
-    if (!!rows) {
+    if (rows) {
         const events = rows.map((row) => {
-
             const entry: ScheduleEntry = {
                 date: parse(row[0], 'MM/dd/yyyy', new Date()),
                 startTime: row[1],
@@ -42,21 +40,22 @@ export const getSchedule = async (): Promise<ScheduleResponse> => {
         });
 
         events.sort((a, b) => a.date.getTime() - b.date.getTime());
-        const pastEvents = events.filter((event) => event.endDate.getTime() < Date.now());
-        const futureEvents = events.filter((event) => event.endDate.getTime() >= Date.now());
+        const pastEvents = events.filter(
+            (event) => event.endDate.getTime() < Date.now(),
+        );
+        const futureEvents = events.filter(
+            (event) => event.endDate.getTime() >= Date.now(),
+        );
 
         pastEvents.reverse();
-
 
         return {
             pastEvents,
             futureEvents,
         };
-
-
     }
     return {
         pastEvents: [],
         futureEvents: [],
     };
-}
+};

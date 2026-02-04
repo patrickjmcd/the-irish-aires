@@ -1,10 +1,9 @@
-import Schedule from "@/templates/Schedule";
+import Schedule from '@/templates/Schedule';
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic';
 
 const SchedulePage = async () => {
-
-    const schedule = await Schedule({showPastEvents: true});
+    const schedule = await Schedule({ showPastEvents: true });
 
     return (
         <div className="m-5">
@@ -14,6 +13,6 @@ const SchedulePage = async () => {
             {schedule}
         </div>
     );
-}
+};
 
 export default SchedulePage;

@@ -1,7 +1,7 @@
-"use client";
-import Link from "next/link";
-import {ReactNode, useState} from "react";
-import {usePathname} from "next/navigation";
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { type ReactNode, useState } from 'react';
 
 export interface NavbarItem {
     label: string;
@@ -19,17 +19,17 @@ interface NavbarV2Props {
 
 const NavbarV2 = (props: NavbarV2Props) => {
     const {
-        textColor = "text-white",
-        backgroundColor = "bg-gray-800",
-        selectedBackgroundColor = "bg-blue-700",
+        textColor = 'text-white',
+        backgroundColor = 'bg-gray-800',
+        selectedBackgroundColor = 'bg-blue-700',
         logo,
-        items
+        items,
     } = props;
-    let {hoverTextColor = "hover:text-blue-500"} = props;
+    let { hoverTextColor = 'hover:text-blue-500' } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathName = usePathname();
 
-    if (!hoverTextColor.startsWith("hover:")) {
+    if (!hoverTextColor.startsWith('hover:')) {
         hoverTextColor = `hover:${hoverTextColor}`;
     }
 
@@ -38,18 +38,19 @@ const NavbarV2 = (props: NavbarV2Props) => {
         <div>
             <div className="block md:hidden">
                 <nav className={`${backgroundColor}`}>
-                    <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <div className="max-w-(--breakpoint-xl) flex flex-wrap items-center justify-between mx-auto p-4">
+                        <Link
+                            href="/"
+                            className="flex items-center space-x-3 rtl:space-x-reverse"
+                        >
                             {logo}
                         </Link>
 
                         <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-
-
                             <button
                                 data-collapse-toggle="navbar-user"
                                 type="button"
-                                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                                 onClick={() => {
                                     setIsMenuOpen(!isMenuOpen);
                                     console.log(isMenuOpen);
@@ -74,14 +75,16 @@ const NavbarV2 = (props: NavbarV2Props) => {
                             </button>
                         </div>
                         {isMenuOpen && (
-                            <div className="items-center justify-between w-full md:flex md:w-auto md:order-1"
-                                 id="navbar-user">
+                            <div
+                                className="items-center justify-between w-full md:flex md:w-auto md:order-1"
+                                id="navbar-user"
+                            >
                                 <ul className="flex flex-col  p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
                                     {items.map((item, i) => (
                                         <li key={i}>
                                             <Link
                                                 href={item.href}
-                                                className={`block py-2 px-3 ${textColor} ${hoverTextColor} rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 ${pathName.includes(item.href) && item.href !== "/" || item.href === "/" && pathName === "/" ? selectedBackgroundColor : ""}`}
+                                                className={`block py-2 px-3 ${textColor} ${hoverTextColor} rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 ${(pathName.includes(item.href) && item.href !== '/') || (item.href === '/' && pathName === '/') ? selectedBackgroundColor : ''}`}
                                             >
                                                 {item.label}
                                             </Link>
@@ -103,11 +106,13 @@ const NavbarV2 = (props: NavbarV2Props) => {
                                 <Link href="/">{logo}</Link>
                             </div>
                             <nav>
-                                <ul className={`navbar flex space-x-4 items-center text-l ${textColor}`}>
+                                <ul
+                                    className={`navbar flex space-x-4 items-center text-l ${textColor}`}
+                                >
                                     {items.map((item, i) => (
                                         <li key={i}>
                                             <Link
-                                                className={`${hoverTextColor} ${pathName.includes(item.href) && item.href !== "/" || item.href === "/" && pathName === "/" ? "underline underline-offset-8" : ""}`}
+                                                className={`${hoverTextColor} ${(pathName.includes(item.href) && item.href !== '/') || (item.href === '/' && pathName === '/') ? 'underline underline-offset-8' : ''}`}
                                                 href={item.href}
                                             >
                                                 {item.label}

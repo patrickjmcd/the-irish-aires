@@ -3,7 +3,7 @@ interface SongProps {
     chorusLines: string[];
 }
 
-const Song = ({title, chorusLines}: SongProps) => {
+const Song = ({ title, chorusLines }: SongProps) => {
     return (
         <div id={title.toLowerCase().replaceAll(' ', '-')}>
             <h1 className="text-xl mb-3">{title}</h1>
@@ -14,6 +14,6 @@ const Song = ({title, chorusLines}: SongProps) => {
             </ul>
         </div>
     );
-}
+};
 
 export default Song;

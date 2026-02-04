@@ -1,7 +1,6 @@
 import ContactUs from '@/templates/ContactUs';
 
 const ContactUsPage = async () => {
-
     const emailServiceId = process.env.EMAIL_SERVICE_ID as string;
     const emailTemplateId = process.env.EMAIL_TEMPLATE_ID as string;
     const emailPublicKey = process.env.EMAIL_PUBLICKEY as string;
@@ -18,6 +17,6 @@ const ContactUsPage = async () => {
             />
         </div>
     );
-}
+};
 
 export default ContactUsPage;

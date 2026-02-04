@@ -1,5 +1,11 @@
-import React, {ChangeEventHandler, FocusEventHandler} from "react";
-import {Field, FormikErrors, FormikTouched, FormikValues} from "formik";
+import {
+    Field,
+    type FormikErrors,
+    type FormikTouched,
+    type FormikValues,
+} from 'formik';
+import type React from 'react';
+import type { ChangeEventHandler, FocusEventHandler } from 'react';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label?: string;
@@ -16,13 +22,22 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     touched: FormikTouched<FormikValues>;
 }
 
-export default function Input({label, type, name, id, errors, touched, disabled, ...rest}: InputProps) {
+export default function Input({
+    label,
+    type,
+    name,
+    id,
+    errors,
+    touched,
+    disabled,
+    ...rest
+}: InputProps) {
     const errorClass =
-        "bg-err border border-red-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-700 dark:border-red-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500";
+        'bg-err border border-red-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-700 dark:border-red-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500';
     const cleanClass =
-        "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500";
+        'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500';
     const disabledClass =
-        "bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white";
+        'bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white';
     let className = cleanClass;
     if (errors[id] && touched[id]) {
         className = errorClass;
@@ -33,11 +48,25 @@ export default function Input({label, type, name, id, errors, touched, disabled,
 
     return (
         <>
-            <label htmlFor={id} className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label
+                htmlFor={id}
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
                 {label}
             </label>
-            <Field type={type} name={name} id={id} {...rest} className={className} disabled={disabled}/>
-            {errors[id] && touched[id] && <span className="error text-error">{errors[id]?.toString()}</span>}
+            <Field
+                type={type}
+                name={name}
+                id={id}
+                {...rest}
+                className={className}
+                disabled={disabled}
+            />
+            {errors[id] && touched[id] && (
+                <span className="error text-error">
+                    {errors[id]?.toString()}
+                </span>
+            )}
         </>
     );
 }
