@@ -25,7 +25,7 @@ importers:
         version: 4.1.0
       formik:
         specifier: ^2.4.9
-        version: 2.4.9(@types/react@19.2.11)(react@19.2.4)
+        version: 2.4.9(@types/react@19.2.14)(react@19.2.4)
       googleapis:
         specifier: ^171.2.0
         version: 171.2.0
@@ -62,10 +62,10 @@ importers:
         version: 25.2.0
       '@types/react':
         specifier: ^19.2.11
-        version: 19.2.11
+        version: 19.2.14
       '@types/react-dom':
         specifier: ^19.2.3
-        version: 19.2.3(@types/react@19.2.11)
+        version: 19.2.3(@types/react@19.2.14)
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -649,8 +649,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.11':
-    resolution: {integrity: sha512-tORuanb01iEzWvMGVGv2ZDhYZVeRMrw453DCSAIn/5yvcSVnMoUMTyf33nQJLahYEnv9xqrTNbgz4qY5EfSh0g==}
+  '@types/react@19.2.14':
+    resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
 
   '@vercel/analytics@1.6.1':
     resolution: {integrity: sha512-oH9He/bEM+6oKlv3chWuOOcp8Y6fo6/PSro8hEkgCW3pu9/OiCXiUpRUogDh3Fs3LH2sosDrx8CxeOLBEE+afg==}
@@ -1778,20 +1778,20 @@ snapshots:
       postcss: 8.5.6
       tailwindcss: 4.1.18
 
-  '@types/hoist-non-react-statics@3.3.7(@types/react@19.2.11)':
+  '@types/hoist-non-react-statics@3.3.7(@types/react@19.2.14)':
     dependencies:
-      '@types/react': 19.2.11
+      '@types/react': 19.2.14
       hoist-non-react-statics: 3.3.2
 
   '@types/node@25.2.0':
     dependencies:
       undici-types: 7.16.0
 
-  '@types/react-dom@19.2.3(@types/react@19.2.11)':
+  '@types/react-dom@19.2.3(@types/react@19.2.14)':
     dependencies:
-      '@types/react': 19.2.11
+      '@types/react': 19.2.14
 
-  '@types/react@19.2.11':
+  '@types/react@19.2.14':
     dependencies:
       csstype: 3.2.3
 
@@ -1915,9 +1915,9 @@ snapshots:
     dependencies:
       fetch-blob: 3.2.0
 
-  formik@2.4.9(@types/react@19.2.11)(react@19.2.4):
+  formik@2.4.9(@types/react@19.2.14)(react@19.2.4):
     dependencies:
-      '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.11)
+      '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.14)
       deepmerge: 2.2.1
       hoist-non-react-statics: 3.3.2
       lodash: 4.17.23
