@@ -16,34 +16,34 @@ importers:
         version: 3.0.1
       '@heroicons/react':
         specifier: ^2.2.0
-        version: 2.2.0(react@19.2.4)
+        version: 2.2.0(react@19.2.8)
       '@vercel/analytics':
         specifier: ^1.6.1
-        version: 1.6.1(next@16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
+        version: 1.6.1(next@16.1.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react@19.2.8)
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
       formik:
         specifier: ^2.4.9
-        version: 2.4.9(@types/react@19.2.11)(react@19.2.4)
+        version: 2.4.9(@types/react@19.2.18)(react@19.2.8)
       googleapis:
         specifier: ^171.2.0
         version: 171.2.0
       next:
         specifier: 16.1.6
-        version: 16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 16.1.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       next-intl:
         specifier: ^4.8.2
-        version: 4.8.2(next@16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
+        version: 4.8.2(next@16.1.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react@19.2.8)(typescript@5.9.3)
       react:
         specifier: ^19.2.4
-        version: 19.2.4
+        version: 19.2.8
       react-dom:
         specifier: ^19.2.4
-        version: 19.2.4(react@19.2.4)
+        version: 19.2.8(react@19.2.8)
       react-social-icons:
         specifier: ^6.25.0
-        version: 6.25.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 6.25.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -62,10 +62,10 @@ importers:
         version: 25.2.0
       '@types/react':
         specifier: ^19.2.11
-        version: 19.2.11
+        version: 19.2.18
       '@types/react-dom':
         specifier: ^19.2.3
-        version: 19.2.3(@types/react@19.2.11)
+        version: 19.2.7(@types/react@19.2.18)
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -644,13 +644,13 @@ packages:
   '@types/node@25.2.0':
     resolution: {integrity: sha512-DZ8VwRFUNzuqJ5khrvwMXHmvPe+zGayJhr2CDNiKB1WBE1ST8Djl00D0IC4vvNmHMdj6DlbYRIaFE7WHjlDl5w==}
 
-  '@types/react-dom@19.2.3':
-    resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
+  '@types/react-dom@19.2.7':
+    resolution: {integrity: sha512-I8bPpDLcHBv1qiIiXDCy71Rt8eQDKJP0sMSWJphDdAcdqiJ1sGpZamavoEIRZmYzjia9LuEb2HlYdDpmoENpvQ==}
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.11':
-    resolution: {integrity: sha512-tORuanb01iEzWvMGVGv2ZDhYZVeRMrw453DCSAIn/5yvcSVnMoUMTyf33nQJLahYEnv9xqrTNbgz4qY5EfSh0g==}
+  '@types/react@19.2.18':
+    resolution: {integrity: sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==}
 
   '@vercel/analytics@1.6.1':
     resolution: {integrity: sha512-oH9He/bEM+6oKlv3chWuOOcp8Y6fo6/PSro8hEkgCW3pu9/OiCXiUpRUogDh3Fs3LH2sosDrx8CxeOLBEE+afg==}
@@ -1169,10 +1169,10 @@ packages:
     resolution: {integrity: sha512-4EK3+xJl8Ts67nLYNwqw/dsFVnCf+qR7RgXSK9jEEm9unao3njwMDdmsdvoKBKHzxd7tCYz5e5M+SnMjdtXGQQ==}
     engines: {node: '>=0.6'}
 
-  react-dom@19.2.4:
-    resolution: {integrity: sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==}
+  react-dom@19.2.8:
+    resolution: {integrity: sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==}
     peerDependencies:
-      react: ^19.2.4
+      react: ^19.2.8
 
   react-fast-compare@2.0.4:
     resolution: {integrity: sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==}
@@ -1186,8 +1186,8 @@ packages:
       react: 16.x.x || 17.x.x || 18.x.x || 19.x.x
       react-dom: 16.x.x || 17.x.x || 18.x.x || 19.x.x
 
-  react@19.2.4:
-    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
+  react@19.2.8:
+    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
     engines: {node: '>=0.10.0'}
 
   rimraf@5.0.10:
@@ -1317,6 +1317,7 @@ packages:
 
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   web-streams-polyfill@3.3.3:
@@ -1434,9 +1435,9 @@ snapshots:
       - encoding
       - supports-color
 
-  '@heroicons/react@2.2.0(react@19.2.4)':
+  '@heroicons/react@2.2.0(react@19.2.8)':
     dependencies:
-      react: 19.2.4
+      react: 19.2.8
 
   '@img/colour@1.0.0': {}
 
@@ -1778,27 +1779,27 @@ snapshots:
       postcss: 8.5.6
       tailwindcss: 4.1.18
 
-  '@types/hoist-non-react-statics@3.3.7(@types/react@19.2.11)':
+  '@types/hoist-non-react-statics@3.3.7(@types/react@19.2.18)':
     dependencies:
-      '@types/react': 19.2.11
+      '@types/react': 19.2.18
       hoist-non-react-statics: 3.3.2
 
   '@types/node@25.2.0':
     dependencies:
       undici-types: 7.16.0
 
-  '@types/react-dom@19.2.3(@types/react@19.2.11)':
+  '@types/react-dom@19.2.7(@types/react@19.2.18)':
     dependencies:
-      '@types/react': 19.2.11
+      '@types/react': 19.2.18
 
-  '@types/react@19.2.11':
+  '@types/react@19.2.18':
     dependencies:
       csstype: 3.2.3
 
-  '@vercel/analytics@1.6.1(next@16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)':
+  '@vercel/analytics@1.6.1(next@16.1.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react@19.2.8)':
     optionalDependencies:
-      next: 16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      react: 19.2.4
+      next: 16.1.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react: 19.2.8
 
   agent-base@7.1.4: {}
 
@@ -1915,14 +1916,14 @@ snapshots:
     dependencies:
       fetch-blob: 3.2.0
 
-  formik@2.4.9(@types/react@19.2.11)(react@19.2.4):
+  formik@2.4.9(@types/react@19.2.18)(react@19.2.8):
     dependencies:
-      '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.11)
+      '@types/hoist-non-react-statics': 3.3.7(@types/react@19.2.18)
       deepmerge: 2.2.1
       hoist-non-react-statics: 3.3.2
       lodash: 4.17.23
       lodash-es: 4.17.23
-      react: 19.2.4
+      react: 19.2.8
       react-fast-compare: 2.0.4
       tiny-warning: 1.0.3
       tslib: 2.8.1
@@ -2203,33 +2204,33 @@ snapshots:
 
   next-intl-swc-plugin-extractor@4.8.2: {}
 
-  next-intl@4.8.2(next@16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(typescript@5.9.3):
+  next-intl@4.8.2(next@16.1.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react@19.2.8)(typescript@5.9.3):
     dependencies:
       '@formatjs/intl-localematcher': 0.5.10
       '@parcel/watcher': 2.5.6
       '@swc/core': 1.15.11
       icu-minify: 4.8.2
       negotiator: 1.0.0
-      next: 16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      next: 16.1.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       next-intl-swc-plugin-extractor: 4.8.2
       po-parser: 2.1.1
-      react: 19.2.4
-      use-intl: 4.8.2(react@19.2.4)
+      react: 19.2.8
+      use-intl: 4.8.2(react@19.2.8)
     optionalDependencies:
       typescript: 5.9.3
     transitivePeerDependencies:
       - '@swc/helpers'
 
-  next@16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  next@16.1.6(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
     dependencies:
       '@next/env': 16.1.6
       '@swc/helpers': 0.5.15
       baseline-browser-mapping: 2.9.19
       caniuse-lite: 1.0.30001767
       postcss: 8.4.31
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
-      styled-jsx: 5.1.6(react@19.2.4)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+      styled-jsx: 5.1.6(react@19.2.8)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.1.6
       '@next/swc-darwin-x64': 16.1.6
@@ -2298,22 +2299,22 @@ snapshots:
     dependencies:
       side-channel: 1.1.0
 
-  react-dom@19.2.4(react@19.2.4):
+  react-dom@19.2.8(react@19.2.8):
     dependencies:
-      react: 19.2.4
+      react: 19.2.8
       scheduler: 0.27.0
 
   react-fast-compare@2.0.4: {}
 
   react-is@16.13.1: {}
 
-  react-social-icons@6.25.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  react-social-icons@6.25.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
     dependencies:
       '@babel/runtime': 7.28.6
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
 
-  react@19.2.4: {}
+  react@19.2.8: {}
 
   rimraf@5.0.10:
     dependencies:
@@ -2416,10 +2417,10 @@ snapshots:
     dependencies:
       ansi-regex: 6.2.2
 
-  styled-jsx@5.1.6(react@19.2.4):
+  styled-jsx@5.1.6(react@19.2.8):
     dependencies:
       client-only: 0.0.1
-      react: 19.2.4
+      react: 19.2.8
 
   tailwindcss@4.1.18: {}
 
@@ -2443,13 +2444,13 @@ snapshots:
 
   url-template@2.0.8: {}
 
-  use-intl@4.8.2(react@19.2.4):
+  use-intl@4.8.2(react@19.2.8):
     dependencies:
       '@formatjs/fast-memoize': 3.1.0
       '@schummar/icu-type-parser': 1.21.5
       icu-minify: 4.8.2
       intl-messageformat: 11.1.2
-      react: 19.2.4
+      react: 19.2.8
 
   uuid@9.0.1: {}
 
