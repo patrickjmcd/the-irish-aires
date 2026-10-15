@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@emailjs/browser':
-        specifier: ^4.4.1
-        version: 4.4.1
+        specifier: ^5.0.0
+        version: 5.0.3
       '@google-cloud/local-auth':
         specifier: 3.0.1
         version: 3.0.1
@@ -139,8 +139,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@emailjs/browser@4.4.1':
-    resolution: {integrity: sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==}
+  '@emailjs/browser@5.0.3':
+    resolution: {integrity: sha512-4HGAkWdzql7mrG34ZFFj7IDJNRgtbl1+yVgHdQJ6XSfhq9gxGUHtttr4UKNi7Fk++1hMXRHy1lTeGZrkioOtsw==}
     engines: {node: '>=14.0.0'}
 
   '@emnapi/runtime@1.8.1':
@@ -1250,7 +1250,7 @@ snapshots:
   '@biomejs/cli-win32-x64@2.3.14':
     optional: true
 
-  '@emailjs/browser@4.4.1': {}
+  '@emailjs/browser@5.0.3': {}
 
   '@emnapi/runtime@1.8.1':
     dependencies:
