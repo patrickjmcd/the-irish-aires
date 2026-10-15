@@ -1,6 +1,6 @@
 {
     "name": "the-irish-aires",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -9,7 +9,7 @@
         "lint": "biome check ."
     },
     "dependencies": {
-        "@emailjs/browser": "^5.0.0",
+        "@emailjs/browser": "^4.4.1",
         "@google-cloud/local-auth": "3.0.1",
         "@heroicons/react": "^2.2.0",
         "@vercel/analytics": "^2.0.0",

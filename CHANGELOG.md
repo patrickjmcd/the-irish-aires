@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.3](https://github.com/patrickjmcd/the-irish-aires/compare/v1.0.2...v1.0.3) (2026-10-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @emailjs/browser to v5 ([#77](https://github.com/patrickjmcd/the-irish-aires/issues/77)) ([411fda1](https://github.com/patrickjmcd/the-irish-aires/commit/411fda123e4f25dd9e1b1ed461ba469dcba84950))
+* **deps:** update dependency @vercel/analytics to v2 ([#78](https://github.com/patrickjmcd/the-irish-aires/issues/78)) ([2c7b37d](https://github.com/patrickjmcd/the-irish-aires/commit/2c7b37dabf3fe528058c8f7f0169746b8ea7687b))
+* **deps:** update dependency googleapis to v144 ([72dafaf](https://github.com/patrickjmcd/the-irish-aires/commit/72dafafd0ab2a2d53e6df698840e9bc0dcda7f65))
+* **deps:** update dependency googleapis to v144 ([ad02632](https://github.com/patrickjmcd/the-irish-aires/commit/ad026329003536d8e12e615e460fa1d0b8592d48))
+* **deps:** update dependency googleapis to v186 ([#79](https://github.com/patrickjmcd/the-irish-aires/issues/79)) ([f031f5f](https://github.com/patrickjmcd/the-irish-aires/commit/f031f5f07291ca3a93be4979b220df866c994d2c))
+* **deps:** update dependency next-intl to v3.19.4 ([0fa24e4](https://github.com/patrickjmcd/the-irish-aires/commit/0fa24e4c98713f205ceae2370e0b07b379ef97d2))
+* **deps:** update dependency next-intl to v3.19.4 ([e350cf4](https://github.com/patrickjmcd/the-irish-aires/commit/e350cf4696c90cec660da5a7ee1eaef3fec0f07c))
+* update next, biome, and tailwindcss ([b0c1728](https://github.com/patrickjmcd/the-irish-aires/commit/b0c172864913f932d1db67d3df1ff242759f2d52))
+
 ## [1.0.2](https://github.com/patrickjmcd/the-irish-aires/compare/v1.0.1...v1.0.2) (2024-09-17)
 
 
