@@ -2,26 +2,16 @@ name: build
 
 on:
   release:
-    types: [ published ]
+    types: [published]
+
+permissions:
+  contents: read
 
 jobs:
   test-build:
-    runs-on: ubuntu-latest
-    env:
-      GOOGLE_SA_B64: ${{ secrets.GOOGLE_SA_B64 }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-      - name: Set up Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: '20'
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build
-        run: pnpm build
+    uses: patrickjmcd/workflows/.github/workflows/node-ci.yml@v1
+    secrets:
+      build-env: GOOGLE_SA_B64=${{ secrets.GOOGLE_SA_B64 }}
 
   trigger-amplify:
     runs-on: ubuntu-latest
