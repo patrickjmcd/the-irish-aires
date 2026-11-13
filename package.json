@@ -15,7 +15,7 @@
         "@vercel/analytics": "^2.0.0",
         "date-fns": "^4.1.0",
         "formik": "^2.4.9",
-        "googleapis": "^188.0.0",
+        "googleapis": "^190.0.0",
         "next": "16.4.3",
         "next-intl": "^4.8.2",
         "react": "^19.2.4",
